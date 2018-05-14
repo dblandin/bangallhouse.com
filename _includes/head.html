@@ -1,0 +1,55 @@
+<head>
+  {% if jekyll.environment == "production" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4948585-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-4948585-4');
+  </script>
+  {% endif %}
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Plain Description -->
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <!-- Google+ -->
+  <link rel="publisher" href="https://plus.google.com/{{site.googleplus}}"/>
+  <meta itemprop="name" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}">
+  <meta itemprop="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+  <meta itemprop="image" content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}">
+  
+  <!-- Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}"/>
+  <meta property="og:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}"/>
+  <meta property="og:image" content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"/>
+  <meta property="og:url" content="{{site.url}}{{page.url}}"/>
+  <meta property="og:site_name" content="{{ site.title }} "/>
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+  <meta name="twitter:image" content="{{site.url}}{{site.socialimg}}">
+  <meta name="twitter:url" content="{{site.url}}{{page.url}}">
+  
+  <!-- CSS & fonts -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- Put your fonts here -->
+
+  <!-- Core CSS file -->
+  <link rel="stylesheet" href="css/photoswipe.css"> 
+
+  <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+       In the folder of skin CSS file there are also:
+       - .png and .svg icons sprite, 
+       - preloader.gif (for browsers that do not support CSS animations) -->
+  <link rel="stylesheet" href="css/default-skin/default-skin.css"> 
+</head>

@@ -1,0 +1,43 @@
+<!-- Loading in some scripts here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- Core JS file -->
+<script src="js/photoswipe.min.js"></script> 
+
+<!-- UI JS file -->
+<script src="js/photoswipe-ui-default.min.js"></script> 
+
+<script>
+  function startGallery(index) { 
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // build items array
+    var items = [
+        {
+            src: "/img/front.jpg",
+            w: 1200,
+            h: 900
+        },
+        {
+            src: "/img/back.jpg",
+            w: 1200,
+            h: 900
+        }
+    ];
+
+    // define options (if needed)
+    var options = {
+        // optionName: 'option value'
+        // for example:
+        index: index // start at first slide
+    };
+
+    // Initializes and opens PhotoSwipe
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+  }
+
+  $("img").click(function(el) {
+    startGallery($(el.currentTarget).index());
+  });
+</script>

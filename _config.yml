@@ -1,0 +1,9 @@
+title: Bangall House
+tagline: >
+  "Anytime" retreat in the hamlet of Bangall, NY featuring a luxurious
+  Scandinavian inspired design.
+url: https://bangallhouse.com
+# socialimg:
+sass:
+ style: compressed
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]

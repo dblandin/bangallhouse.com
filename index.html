@@ -1,0 +1,127 @@
+---
+layout: default
+fulltitle: "Bangall House"
+---
+
+<section class="main">
+  <h1>Bangall House</h1>
+
+  <div class="images">
+    <img src="img/front.jpg" />
+    <img src="img/back.jpg" />
+  </div>
+
+  <div class="text-container">
+    <p>5-Star AirBnB with <b>superhost</b> status.</p>
+
+    <p>
+      &#8220;Anytime&#8221; retreat in the hamlet of Bangall, NY featuring
+      a luxurious Scandinavian inspired design.
+      <a href="https://www.instagram.com/explore/tags/bangallhouse">#bangallhouse</a>
+      on Instagram
+    </p>
+
+    <p>
+      Three unique bedroom choices with private baths:
+    </p>
+
+    <ul>
+      <li>King or Twin Master with writing table</li>
+      <li>Queen with tub and handheld shower</li>
+      <li>Creek-side Queen with direct outdoor &amp; pool access</li>
+    </ul>
+
+    <p>
+      Architecturally re-imagined, the house insures a
+      comfortable and modern utility experience in a cozy,
+      traditional atmosphere.
+    </p>
+
+    <p>
+      Any two rooms may be reserved at a time. Hosts are present and stay in
+      the other room.
+    </p>
+
+    <p>
+      Carefully crafted experience. Hope to host you soon! See our <a href="https://www.airbnb.com/rooms/16286368">current availability</a>.</p>
+    <p>
+      <b>Contact</b>
+      <br/>
+      <a href="mailto:info@bangallhouse.com">info@bangallhouse.com</a>
+    </p>
+
+    <p>
+      Bangall House &#169; {{ site.time | date: "%Y" }}
+    </p>
+  </div>
+
+  {% if jekyll.environment == "production" %}
+  <div class="map">
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCHi7TRc_zz37hT30R4JAHXS07jWulvl3A&q=Stanfordville,+NY+12581" allowfullscreen>
+    </iframe>
+  </div>
+  {% endif %}
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+      <!-- Background of PhotoSwipe. 
+           It's a separate element as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+
+          <!-- Container that holds slides. 
+              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+              Don't modify these 3 pswp__item elements, data is added later on. -->
+          <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+          </div>
+
+          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+          <div class="pswp__ui pswp__ui--hidden">
+
+              <div class="pswp__top-bar">
+
+                  <!--  Controls are self-explanatory. Order can be changed. -->
+
+                  <div class="pswp__counter"></div>
+
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                  <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                  <!-- element will get class pswp__preloader--active when preloader is running -->
+                  <div class="pswp__preloader">
+                      <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                          <div class="pswp__preloader__donut"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div> 
+              </div>
+
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              </button>
+
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              </button>
+
+              <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
